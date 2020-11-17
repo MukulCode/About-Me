@@ -14,6 +14,31 @@
         android:layout_height="wrap_content"
         android:text="@string/NAME" />
 
+    <EditText
+        android:id="@+id/my_nickname_edit"
+        style="@style/NameStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/nickname_hint"
+        android:inputType="textPersonName" />
+
+    <Button
+        style="@style/Widget.AppCompat.Button.Colored"
+        android:id="@+id/done_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:fontFamily="@font/roboto_medium"
+        android:text="@string/done" />
+    <TextView
+        android:id="@+id/nickname_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        style="@style/NameStyle"
+        android:visibility="gone"/>
+
     <ImageView
         android:id="@+id/star_image"
         android:layout_width="match_parent"
