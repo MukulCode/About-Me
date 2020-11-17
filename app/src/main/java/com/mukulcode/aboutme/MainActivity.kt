@@ -11,11 +11,13 @@ import com.mukulcode.aboutme.databinding.ActivityMainBinding
  class MainActivity : AppCompatActivity() {
 
      private lateinit var binding : ActivityMainBinding
+     private val myname :MyName = MyName("Mukul Kumar")
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        setContentView(R.layout.activity_main)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.myName = myname
 
 //        val button = findViewById<Button>(R.id.done_button).setOnClickListener{
 //            addNickName(it)
@@ -32,7 +34,8 @@ import com.mukulcode.aboutme.databinding.ActivityMainBinding
 
 
         binding.apply {
-            nicknameText.text = myNicknameEdit.text
+//            nicknameText.text = myNicknameEdit.text
+            myname?.nickname = myNicknameEdit.text.toString()
             invalidateAll()
             myNicknameEdit.visibility = View.GONE
             view.visibility = View.GONE

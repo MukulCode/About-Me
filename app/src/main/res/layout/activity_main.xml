@@ -4,6 +4,13 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="myName"
+            type="com.mukulcode.aboutme.MyName" />
+    </data>
+
 <LinearLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -15,7 +22,7 @@
         style="@style/NameStyle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/NAME" />
+        android:text="@={myName.name}" />
 
     <EditText
         android:id="@+id/my_nickname_edit"
@@ -38,7 +45,7 @@
         android:id="@+id/nickname_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text=""
+        android:text="@={myName.nickname}"
         style="@style/NameStyle"
         android:visibility="gone"/>
 
