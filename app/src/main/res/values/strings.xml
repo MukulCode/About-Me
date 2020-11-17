@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">About Me</string>
     <string name="NAME">Mukul Kumar</string>
+    <string name="yellow_star">yello star</string>
 </resources>
